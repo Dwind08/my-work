@@ -1,0 +1,12 @@
+server:
+  port: 8821
+
+lch:
+  test: 空山
+#mail:
+#  send: ok
+logging:
+  # 日志文件路径, 部署及运行时可改写以覆盖（中文注释在windows等运行时可能会出问题，这里只是写给大家看的注释）
+  file-location: .
+  maxFileSize: 500MB
+  maxHistory: 10

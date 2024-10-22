@@ -1,0 +1,12 @@
+# git忽略配置
+.idea
+*.iml
+.settings
+.project
+.classpath
+target/
+.factorypath
+.springBeans
+log/
+*.log
+/target/
