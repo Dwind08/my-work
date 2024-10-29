@@ -4,6 +4,7 @@ import cn.hutool.core.bean.BeanUtil;
 import cn.hutool.core.codec.Base64Decoder;
 import com.dwind.mywork.util.NumberCalUtil;
 import com.dwind.mywork.util.TextReader;
+import jodd.util.ThreadUtil;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.codec.binary.Base64;
 import cn.hutool.core.collection.ListUtil;
@@ -1108,7 +1109,7 @@ class CodeFormatTest {
 
     public static BigDecimal calculatePiHighRite(int times) {
         int numIterations = times;
-        int precision = 20000006;
+        int precision = 90000;
         RoundingMode halfUp = RoundingMode.HALF_UP;
         MathContext mathContext = new MathContext(precision, halfUp);
 
@@ -1157,7 +1158,7 @@ class CodeFormatTest {
     @Test
     void test40_1() {
         long start = System.currentTimeMillis();
-        int numIterations = 30;
+        int numIterations = 15;
         BigDecimal pi = calculatePiHighRite(numIterations);
         long end = System.currentTimeMillis();
         System.out.println("圆周率近似值: " + pi);
@@ -1187,11 +1188,22 @@ class CodeFormatTest {
     }
 
 
+    @Test
+    void test44() {
+        String money = "490.106";
+        boolean number = NumberUtil.isNumber(money);
+        System.out.println(number);
+        Float value = Float.valueOf(money);
+        value = value * 10000;
+        System.out.println(String.format("%.2f", value));
+
+    }
+
 
     @Test
     void test22() {
-        String idStr = "1648283587391827969\n" +
-                "1648286293951033346\n";
+        String idStr = "1844620461197062146\n" +
+                "1844620461197062145\n";
         String[] split = idStr.split("\n");
         String formatStr = "\'";
         String join = String.join(formatStr + ", " + formatStr, split);

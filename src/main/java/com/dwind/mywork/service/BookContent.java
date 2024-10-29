@@ -52,7 +52,7 @@ public class BookContent {
     public void fileCharReader(int begin, int end){
 //        String source = "src/main/resources/2023091501jzjg.txt";
         File file = new File(source2);
-        char[] charSet = new char[300];
+        char[] charSet = new char[108];
         try {
             int iCopy = 0;
             FileReader fileReader = new FileReader(file);

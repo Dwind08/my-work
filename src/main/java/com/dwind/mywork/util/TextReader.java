@@ -16,9 +16,9 @@ import java.util.Date;
 
 
 public class TextReader {
-    public static String calculatePi = "src/main/resources/90/calculatePi.txt";
+    public static String calculatePi = "src/main/resources/90/calculatePi-20billion.txt";
 
-    public static String calRelPi = "src/main/resources/90/calRelPi.txt";
+    public static String calRelPi = "src/main/resources/90/PIFile.txt";
 
 
     public static int fileCharContrast(int length){
